@@ -4,6 +4,7 @@ Simple DevOps Continous Delivery Pipleine for a Ruby and MySQL app using Docker,
 Change docker registry from 10.65.57.126:5000 in all files to your registry 
 
 1) Install and start Gitlab
+(For my env I ran it in a docker container on my demo host using https://github.com/sameersbn/docker-gitlab)
 2) Create new projects for each of:
 	ruby-mysql-web
 	ruby-mysql-web-test
@@ -18,5 +19,5 @@ Change docker registry from 10.65.57.126:5000 in all files to your registry
 
 6) add jenkins plugin for Build Pipeline
 
-
+Check https://github.com/phauer/continuous-delivery-playground to get help on how to setup gitlab, docker regitry , jenkins and build pipeline
 
