@@ -1,0 +1,14 @@
+ruby_web:
+ image: 10.65.57.126:5000/ruby-mysql-web:0.0.1-SNAPSHOT 
+ environment:
+  PORT: 9393
+ ports:
+  - "9393:9393"
+ links:
+  - mysql_db:mysql_host
+mysql_db:
+ image: mysql:latest
+ volumes:
+ - /mnt/mysql_data_test:/var/lib/mysql
+ environment:
+  MYSQL_ROOT_PASSWORD: netapp01

@@ -1,0 +1,14 @@
+ruby_web_prod:
+ image: 10.65.57.126:5000/ruby-mysql-web:0.0.1-SNAPSHOT 
+ ports:
+  - "9494:9494"
+ links:
+  - mysql_db_prod:mysql_host
+mysql_db_prod:
+ build: mysql-image
+ volumes:
+ - /mnt/mysql_data_prod:/var/lib/mysql
+ - /software/snapcreator/scAgent4.1.2:/etc/netapp/snapcreator/scAgent4.1.2
+ environment:
+  MYSQL_ROOT_PASSWORD: netapp01
+  SCAGENT_HOME: /etc/netapp/snapcreator/scAgent4.1.2
